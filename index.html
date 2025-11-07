@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+
+    <!--  Tailwind CSS vía CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- ===== NAVBAR ===== -->
+    
+    <header class="bg-green-600 text-white-600 fixed w-full top-0 left-0 shadow-lg z-50">
+      <nav class="max-w-6xl mx-auto flex items-center justify-between p-4">
+        
+    <!-- LOGO + TEXTO -->
+            <div class="flex items-center gap-3">
+    <img src="assets/img/logo_por.png" alt="Logo" class="w-10 h-10 rounded-full">
+    <h1 class="text-2xl font-bold">Mi Portafolio</h1>
+           </div>
+
+
+          <ul class="hidden md:flex space-x-8 text-white-600 font-semibold">
+              <li><a href="#inicio" class="hover:text-indigo-700 transition">Inicio</a></li>
+              <li><a href="#sobre-mi" class="hover:text-indigo-700 transition">Sobre mí</a></li>
+              <li><a href="#portafolio" class="hover:text-indigo-700 transition">Portafolio</a></li>
+              <li><a href="#contacto" class="hover:text-indigo-700 transition">Contacto</a></li>
+          </ul>
+
+          <button id="menu-btn" class="md:hidden text-2xl">&#9776;</button>
+      </nav>
+
+      <!-- Menú móvil -->
+      <div id="menu" class="hidden bg-white md:hidden px-6 pb-4 text-gray-600 font-semibold">
+          <a href="#inicio" class="block py-2">Inicio</a>
+          <a href="#sobre-mi" class="block py-2">Sobre mí</a>
+          <a href="#portafolio" class="block py-2">Portafolio</a>
+          <a href="#contacto" class="block py-2">Contacto</a>
+      </div>
+       <!-- LIGHTBOX JS (sin instalación) -->
+       <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
+
+
+    </header>
+
+    <!-- INICIO -->
+    <section id="inicio" class="pt-28 p-10 text-center">
+        <h2 class="text-4xl font-semibold">¡Hola!</h2>
+        <p class="text-lg mt-4">Soy estudiante de tecnología de la imformación y comunicación/ Este es mi portafolio profesional.</p>
+    </section>
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="p-10 bg-white">
+        <h2 class="text-3xl font-bold text-center mb-6">Sobre mí</h2>
+
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <img src="assets/img/perfil_mejor.jpg" alt="Foto personal"
+     class="rounded-full shadow-lg mx-auto w-60 h-60 object-cover object-top border-4 border-indigo-600">
+
+
+
+              <div>
+      <p class="text-lg leading-relaxed text-gray-700">
+        Mi nombre es Luis, me interesa el desarrollo web, la administración de redes y electrónica digital aplicada. Me caracterizo por mi capacidad de aprendizaje
+        autónomo, disciplina y enfoque hacia la solución de problemas técnicos.
+
+        He desarrollado proyectos en <strong>Cisco Packet Tracer, Arduino y Tinkercad</strong>, integrando conceptos
+        como topologías de red, lógica secuencial, microcontroladores y electrónica digital. Actualmente me encuentro
+        fortaleciendo mis conocimientos en <strong>HTML, Python, Pseint y javastring </strong>
+
+        Mi objetivo es aplicar mi formación en entornos profesionales que impulsen mi desarrollo y experiencia.
+                </p>
+
+                <a href="assets/cv/Hoja de Vida -Luis Panta.pdf" download
+   class="mt-6 inline-block bg-green-600 hover:bg-indigo-600 text-white px-6 py-2 rounded-xl font-semibold transition">
+   📄 Descargar CV
+                </a>
+
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTAFOLIO -->
+    <section id="portafolio" class="bg-gray-100 py-20">
+      <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-bold text-center text-indigo-600 mb-12">Portafolio</h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+              <!-- Proyecto 1 -->
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition cursor-pointer"
+                    onclick="openImage('assets/img/proyecto1.png')">
+
+                  <img src="assets/img/proyecto1.png" alt="Topología de red Cisco Packet Tracer">
+                  <div class="p-5">
+                      <h3 class="text-xl font-semibold">Topología de Red – Cisco Packet Tracer</h3>
+                      <p class="text-gray-600 text-sm mt-3">
+                          Diseño de una red estructurada para una institución educativa,
+                          conectando rectorado, sala de cómputo y aulas mediante routers,
+                          switches y puntos de acceso inalámbrico.
+                      </p>
+                  </div>
+              </div>
+
+              <!-- Proyecto 2 -->
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition cursor-pointer"
+                    onclick="openImage('assets/img/proyecto2.png')">
+                  <img src="assets/img/proyecto2.png" alt="Contador síncrono binario 4 bits">
+                  <div class="p-5">
+                      <h3 class="text-xl font-semibold">Contador síncrono 4 bits – Electrónica digital</h3>
+                      <p class="text-gray-600 text-sm mt-3">
+                          Implementación de un contador utilizando flip-flops, lógica AND
+                          y un display de 7 segmentos en simulación Tinkercad.
+                      </p>
+                  </div>
+              </div>
+
+              <!-- Proyecto 3 -->
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 transition cursor-pointer"
+                    onclick="openImage('assets/img/proyecto3.png')">
+                  <img src="assets/img/proyecto3.png" alt="Arduino registro de desplazamiento 74HC595">
+                  <div class="p-5">
+                      <h3 class="text-xl font-semibold">Control de LEDs – Arduino + 74HC595</h3>
+                      <p class="text-gray-600 text-sm mt-3">
+                          Control secuencial de ocho LEDs utilizando Arduino y un registro
+                          de desplazamiento para optimizar el uso de pines digitales.
+                      </p>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+    </section>
+
+    <!-- ======== CONTACTO ======== -->
+<section id="contacto" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-indigo-600 mb-6">Contacto</h2>
+
+      <p class="text-center text-lg text-gray-700 mb-12">
+          ¿Tienes alguna duda o quieres ponerte en contacto conmigo?
+          Llena el formulario y te responderé lo antes posible.
+      </p>
+
+      <form class="max-w-3xl mx-auto grid grid-cols-1 gap-6 bg-gray-100 p-8 rounded-xl shadow-lg">
+          <input 
+              type="text" 
+              placeholder="Tu nombre" 
+              class="p-3 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none"
+              required
+          >
+
+          <input 
+              type="email" 
+              placeholder="Tu correo" 
+              class="p-3 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none"
+              required
+          >
+
+          <textarea 
+              rows="5" 
+              placeholder="Escribe tu mensaje"
+              class="p-3 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none"
+              required
+          ></textarea>
+
+          <button 
+              type="submit"
+              class="bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition">
+              Enviar mensaje
+          </button>
+      </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-green-600 text-white py-6 mt-20">
+    <div class="container mx-auto text-center space-y-3">
+
+        <h3 class="text-xl font-semibold">Gracias por visitar mi portafolio</h3>
+
+        <p class="text-sm">Puedes encontrarme en mis redes sociales:</p>
+
+        <div class="flex justify-center space-x-6 text-2xl">
+            <a href="https://www.tinkercad.com/dashboard/designs/all" target="_blank" class="hover:text-gray-300 transition">📱</a>
+            <a href="https://github.com/dashboard" target="_blank" class="hover:text-gray-300 transition">🐈‍⬛</a>
+            <a href="lpanta3693@utm.edu.ec" class="hover:text-gray-300 transition">📧</a>
+        </div>
+
+        <p class="text-sm opacity-80">
+            © 2025 • Luis Panta — Todos los derechos reservados
+        </p>
+    </div>
+</footer>
+
+   <!-- SCRIPT DEL MENÚ -->
+<script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+
+</script>
+<script>
+    function openImage(imagePath) {
+        basicLightbox.create(`
+            <img src="${imagePath}" style="max-width: 90%; max-height: 90%; border-radius: 12px;">
+        `).show()
+    }
+</script>
+
+</body>
+</html>
+
